@@ -1,0 +1,44 @@
+<h1>ADMINISTRADOR DE PRODUCTOS</h1>
+<main>
+
+  <aside>
+
+    <div class='forms'>
+
+      <h2>AGREGAR PRODUCTO</h2>
+
+      <label for='txtTit'>Titulo:</label>
+      <input type='text' id='txtTit' name='title' />
+
+      <label for='txtDesc'>Desc:</label>
+      <input type='text' id='txtDesc' name='desc' />
+
+      <label for='txtPrice'>Precio:</label>
+      <input type='text' id='txtPrice' name='price' />
+
+      <label for='chkState'>Estado:</label>
+      <input type='checkbox' id='chkState' name='status' />
+
+      <label for='txtStock'>Stock:</label>
+      <input type='text' id='txtStock' name='stock' />
+
+      <label for='txtCat'>Categoria:</label>
+      <input type='text' id='txtCat' name='category' />
+
+      <button id='btnAdd'>Agregar producto</button>
+      <span id='msgCont0'></span>
+
+    </div>
+    <div class='forms'>
+      <h2>ELIMINAR PRODUCTO</h2>
+      <label for='txtId'>Code:</label>
+      <input type='text' id='txtId' name='code' />
+      <button id='btnDelete'>Eliminar producto</button>
+      <span id='msgCont1'></span>
+    </div>
+
+  </aside>
+  <a href='/views/products'>Volver</a>
+</main>
+
+<script src='/js/index.js'></script>

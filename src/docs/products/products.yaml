@@ -1,0 +1,93 @@
+paths:
+  /api/products/:
+    get:
+      summary: Obtiene todos los productos.
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Productos obtenidos con exito.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/Products'
+        '404':
+          description: No hay productos para los criterios seleccionados.
+        '500':
+          description: Error inesperado.
+  /api/products/addProd:
+    post:
+      summary: Agrega un producto a la Base de datos.
+      tags:
+        - Products
+      responses:
+        '201':
+          description: producto creado con éxito.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/Products'
+        '500':
+          description: error al crear el producto.
+  /api/products/delProd:
+    delete:
+      summary: Borra un producto de la Base de datos.
+      tags:
+        - Products
+      responses:
+        '200':
+          description: producto eliminado con éxito.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#components/schemas/Products'
+        '500':
+          description: error al eliminar el producto.
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado de Mongo.
+        title:
+          type: String
+          description: Titulo del producto.
+        desc:
+          type: String
+          description: Descripcion del producto.
+        code:
+          type: String
+          description: Código único del produco.
+        price:
+          type: Number
+          description: Precio del producto.
+        status:
+          type: Boolean
+          description: Estado del producto en el sistema.
+        stock:
+          type: Number
+          description: Cantidad del producto en existencia.
+        category:
+          type: String
+          description: Categoria del producto.
+        thumbnails:
+          type: String
+          description: Ruta de la imagen del producto.
+      example:
+        _id: ObjectId("aasdasdasdas")
+        title: 'Producto1'
+        desc: 'Producto bueno, bonito y barato'
+        code: 'JJ0KS1'
+        price: 300000
+        status: true
+        stock: 500
+        category: 'Limpieza'
+        thumbnails: 'C:/../../../img.png'

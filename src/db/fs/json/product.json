@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Práctico Metal Queso",
+    "desc": "Deporte",
+    "code": "a5c984",
+    "price": "93.00",
+    "status": true,
+    "stock": 5,
+    "category": "Deporte",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Sorprendente Hormigon Pollo",
+    "desc": "Carreras",
+    "code": "f9dad9",
+    "price": "573.00",
+    "status": true,
+    "stock": 5,
+    "category": "Carreras",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Guapa Plástico Pelota",
+    "desc": "Deporte",
+    "code": "fd7bdd",
+    "price": "825.00",
+    "status": true,
+    "stock": 5,
+    "category": "Deporte",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Pequeño Granito Gorro",
+    "desc": "Deporte",
+    "code": "3514b9",
+    "price": "858.00",
+    "status": true,
+    "stock": 5,
+    "category": "Deporte",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Fantástico Madera Pantalones",
+    "desc": "Acción",
+    "code": "a6c0d3",
+    "price": "654.00",
+    "status": true,
+    "stock": 5,
+    "category": "Acción",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Sorprendente Plástico Mesa",
+    "desc": "Deporte",
+    "code": "b16ee8",
+    "price": "475.00",
+    "status": true,
+    "stock": 5,
+    "category": "Deporte",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Genérico Plástico Teclado",
+    "desc": "Acción",
+    "code": "b25f64",
+    "price": "481.00",
+    "status": true,
+    "stock": 5,
+    "category": "Acción",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Práctico Plástico Mesa",
+    "desc": "Carreras",
+    "code": "d07cb9",
+    "price": "343.00",
+    "status": true,
+    "stock": 5,
+    "category": "Carreras",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Pequeño Madera Pantalones",
+    "desc": "Carreras",
+    "code": "52198c",
+    "price": "160.00",
+    "status": true,
+    "stock": 5,
+    "category": "Carreras",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Inteligente Metal Queso",
+    "desc": "RPG",
+    "code": "33c8b3",
+    "price": "120.00",
+    "status": true,
+    "stock": 5,
+    "category": "RPG",
+    "thumbnails": "./"
+  },
+  {
+    "title": "Genérico Madera Guantes",
+    "desc": "Acción",
+    "code": "8a5757",
+    "price": "601.00",
+    "status": true,
+    "stock": 5,
+    "category": "Acción",
+    "thumbnails": "./"
+  }
+]
