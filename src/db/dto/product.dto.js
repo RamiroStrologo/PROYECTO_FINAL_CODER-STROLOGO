@@ -7,6 +7,7 @@ class ProductDTO {
     this.stock = data.stock;
     this.category = data.category;
     this.thumbnails = './';
+    this.users = data.id;
   }
 }
 

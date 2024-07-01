@@ -39,11 +39,11 @@ const getProducts = async (req, res) => {
 
 const addProd = async (req, res) => {
   let data = req.body;
-  const { title, desc, price, category } = data;
-  if (!title || !desc || !price || !category) {
+  const { id, title, desc, price, category } = data;
+  if (!id || !title || !desc || !price || !category) {
     CustomError.createError({
       name: 'Error al crear el usuario',
-      cause: generateUserErrorInfo({ title, desc, price, category }),
+      cause: generateUserErrorInfo({ id, title, desc, price, category }),
       message: 'Campos vacios o tipo de dato invalido',
       code: EErrors.INVALID_TYPES_ERROR,
     });
@@ -57,7 +57,7 @@ const addProd = async (req, res) => {
 
 const delProd = async (req, res) => {
   try {
-    const code = req.body.code;
+    const { code } = req.body;
 
     const response = await pm.delProduct(code);
     if (response)

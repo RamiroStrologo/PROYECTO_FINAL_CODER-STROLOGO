@@ -26,4 +26,22 @@ const authorizeAdminForRoute = async (req, res, next) => {
   }
 };
 
-module.exports = { authorizeUserForRoute, authorizeAdminForRoute };
+const authorizeAdminAndPremiumForRoute = async (req, res, next) => {
+  try {
+    const data = req.session.passport.user;
+    return data.rol == 'admin' || data.rol == 'premium'
+      ? next()
+      : res.status(401).send({
+          msg: 'No tienes permiso para realizar esta acción',
+          data: false,
+        });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+module.exports = {
+  authorizeUserForRoute,
+  authorizeAdminForRoute,
+  authorizeAdminAndPremiumForRoute,
+};

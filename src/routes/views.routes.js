@@ -1,6 +1,10 @@
 const { Router } = require('express');
 const route = new Router();
-const { authorizeAdminForRoute } = require('../middleware/auth.middleware');
+const {
+  authorizeUserForRoute,
+  authorizeAdminForRoute,
+  authorizeAdminAndPremiumForRoute,
+} = require('../middleware/auth.middleware');
 const {
   login,
   logup,
@@ -16,9 +20,9 @@ route.get('/login', login);
 route.get('/logup', logup);
 
 route.get('/products', products);
-route.get('/cart', cart);
+route.get('/cart', authorizeUserForRoute, cart);
 
-route.get('/managerProds', authorizeAdminForRoute, productManager);
+route.get('/managerProds', authorizeAdminAndPremiumForRoute, productManager);
 route.get('/userManager', authorizeAdminForRoute, usersManager);
 
 route.get('/passrecovery', passRecovery);

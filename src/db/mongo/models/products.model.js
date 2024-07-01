@@ -27,6 +27,19 @@ const ProductSchema = new mongoose.Schema({
     enum: ['Acción', 'Deporte', 'RPG', 'Carreras'],
   },
   thumbnails: { type: String, required: true },
+  users: {
+    type: [
+      {
+        user: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'users',
+        },
+      },
+    ],
+  },
+});
+ProductSchema.pre('findOne', function () {
+  this.populate('users.user');
 });
 ProductSchema.plugin(mongoPaginate);
 const Product = mongoose.model('products', ProductSchema);

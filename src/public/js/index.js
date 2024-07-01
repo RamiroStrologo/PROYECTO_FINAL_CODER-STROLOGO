@@ -129,6 +129,7 @@ async function LoadPageProducts() {
 async function LoadPageProdManager() {
   const btnAdd = document.querySelector('#btnAdd');
   btnAdd.addEventListener('click', async () => {
+    const { id } = await sessionData();
     let txtTit = document.querySelector('#txtTit');
     let txtDesc = document.querySelector('#txtDesc');
     let txtPrice = document.querySelector('#txtPrice');
@@ -147,6 +148,7 @@ async function LoadPageProdManager() {
         status: chkState.value,
         stock: txtStock.value,
         category: txtCat.value,
+        id: id,
       }),
     });
     const data = await response.json();
