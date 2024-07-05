@@ -2,7 +2,7 @@ const { Command } = require('commander');
 
 const program = new Command();
 
-program.option('--mode <mode>', 'Entorno de trabajo', 'dev');
+program.option('--mode <mode>', 'Entorno de trabajo', 'prod');
 
 program.parse();
 
