@@ -49,6 +49,9 @@ app.use('/api/faker', fakerRoutes);
 app.use('/api/mailer', mailerRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/apidocs', swaggerUIExpress.serve, swaggerUIExpress.setup(specs));
+app.get('/', (req, res) => {
+  res.redirect('/views');
+});
 
 app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars');

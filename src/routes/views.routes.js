@@ -13,8 +13,10 @@ const {
   productManager,
   usersManager,
   passRecovery,
+  index,
 } = require('../controllers/views.controllers');
 
+route.get('/', index);
 route.get('/login', login);
 
 route.get('/logup', logup);
